@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Executable</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<h1>Download Executable</h1>
+<p>Click the button below to download the executable file.</p>
+
+<button id="downloadBtn">Download Executable</button>
+
+<script>
+document.getElementById('downloadBtn').addEventListener('click', function() {
+  // Get the filename of the executable
+  var fileName = 'UK Multi Income Tax Calculator v1App Setup-1.0.0.exe';
+  
+  // Construct the download URL using relative path
+  var downloadUrl = fileName;
+  
+  // Create an anchor element
+  var link = document.createElement('a');
+  link.href = downloadUrl;
+  
+  // Set the download attribute to specify the filename
+  link.download = fileName;
+  
+  // Append the anchor element to the document body
+  document.body.appendChild(link);
+  
+  // Trigger a click event on the anchor element
+  link.click();
+  
+  // Remove the anchor element from the document body
+  document.body.removeChild(link);
+});
+</script>
+
+</body>
+</html>
+
