@@ -21,6 +21,27 @@
   button:hover {
     background-color: #0056b3;
   }
+
+  .container {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: left; /* Align text to the left within the container */ 
+  }
+
+  .warning {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw; /* Set font size relative to viewport width */
+    line-height: 1.5;
+    opacity: 0.6;
+  }
+
+  .download{
+    width: 100%; /* Adjust image width as needed */
+    max-width: 900px; /* Set maximum width for the image */
+    margin-top: 0px;
+    margin-bottom: 30px;
+    
+  }
 </style>
 </head>
 <body>
@@ -29,6 +50,21 @@
 <p>Click the button below to download the executable file.</p>
 
 <button id="downloadBtn">Download Executable</button>
+<div class="container">
+  <pre class="warning">
+    Windows and Mac operating systems often warn users about potentially harmful executable files to protect them from malware or viruses. 
+    Executable files have the ability to perform actions on your computer, and if they contain malicious code, they can harm your system by 
+    stealing data, corrupting files, or compromising security.
+
+    These warnings typically appear when downloading files from the internet or receiving them via email because these are common vectors for 
+    malware distribution. The warnings serve as a precautionary measure, reminding users to be cautious and to verify the source and legitimacy 
+    of the executable file before downloading or opening it. It's a crucial part of maintaining cybersecurity hygiene and preventing potential 
+    harm to your system.
+
+    If you know and trust the author / developer you can follow the steps below to download and install the program.
+  </pre>
+</div>
+<img class="download" src="download.png">
 
 <script>
 document.getElementById('downloadBtn').addEventListener('click', function() {
@@ -58,4 +94,3 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
 
 </body>
 </html>
-
